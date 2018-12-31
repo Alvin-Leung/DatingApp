@@ -21,6 +21,7 @@ import { AuthGuard } from './_guards/auth.guard';
 import { UserService } from './_services/user.service';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { MemberDetailResolver } from './_resolvers/member-detail-resolver';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -58,7 +59,8 @@ export function tokenGetter() {
       ErrorInterceptorProvider,
       AlertifyService,
       AuthGuard,
-      UserService
+      UserService,
+      MemberDetailResolver
    ],
    bootstrap: [
       AppComponent

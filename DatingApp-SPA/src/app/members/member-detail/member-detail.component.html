@@ -1,20 +1,20 @@
 <div class="container mt-4">
   <div class="row">
-    <div class="col-sm-12"><h3>{{user?.knownAs}}'s Profile</h3></div>
+    <div class="col-sm-12"><h3>{{user.knownAs}}'s Profile</h3></div>
     <div class="col-sm-4">
       <div class="card">
         <div class="text-center">
-          <img [src]="user?.photoUrl" alt="{{user?.knownAs}}" class="card-img-top rounded-circle">
+          <img [src]="user.photoUrl" alt="{{user.knownAs}}" class="card-img-top rounded-circle">
         </div>
         <div class="card-body">
           <strong class="card-title">Location</strong>
-          <p class="card-text">{{user?.city}}, {{user?.country}}</p>
+          <p class="card-text">{{user.city}}, {{user.country}}</p>
           <strong class="card-title">Age</strong>
-          <p class="card-text">{{user?.age}}</p>
+          <p class="card-text">{{user.age}}</p>
           <strong class="card-title">Last Active</strong>
-          <p class="card-text">{{user?.lastActive}}</p>
+          <p class="card-text">{{user.lastActive}}</p>
           <strong class="card-title">Member Since</strong>
-          <p class="card-text">{{user?.created}}</p>
+          <p class="card-text">{{user.created}}</p>
         </div>
         <div class="card-footer">
           <div class="btn-group d-flex">
@@ -27,15 +27,15 @@
     <div class="col-sm-8">
       <div class="tab-panel">
         <tabset class="member-tabset">
-          <tab heading="About {{user?.knownAs}}">
+          <tab heading="About {{user.knownAs}}">
             <h4>Description</h4>
-            <p>{{user?.introduction}}</p>
+            <p>{{user.introduction}}</p>
             <h4>Looking For</h4>
-            <p>{{user?.lookingFor}}</p>
+            <p>{{user.lookingFor}}</p>
           </tab>
           <tab heading="Interests">
             <h4>Interests</h4>
-            <p>{{user?.interests}}</p>
+            <p>{{user.interests}}</p>
           </tab>
           <tab heading="Photos">
             <p>Photos will go here</p>
