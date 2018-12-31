@@ -18,12 +18,14 @@ export class MemberDetailComponent implements OnInit {
     private alertifyService: AlertifyService) { }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.userService.getUser(params['id']).subscribe((user: User) => {
-        this.user = user;
-      }, error => {
-        this.alertifyService.error(error);
-      });
+    this.loadUser();
+  }
+
+  private loadUser() {
+    this.userService.getUser(+this.route.snapshot.params['id']).subscribe((user: User) => {
+      this.user = user;
+    }, error => {
+      this.alertifyService.error(error);
     });
   }
 }
