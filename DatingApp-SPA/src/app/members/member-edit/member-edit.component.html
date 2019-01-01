@@ -47,15 +47,14 @@
                 <label for="interests"><h4>Interests</h4></label>
                 <textarea class="form-control" name="interests" rows="6" [(ngModel)]="user.interests"></textarea>
               </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="city"><h4>City</h4></label>
-                  <input type="text" class="form-control" name="city" [(ngModel)]="user.city">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="country"><h4>Country</h4></label>
-                  <input type="text" class="form-control" name="country" [(ngModel)]="user.country">
-                </div>
+              <div class="form-group">
+                <h4>Location</h4>
+              </div>
+              <div class="form-inline">
+                <label class="mr-1" for="city">City:</label>
+                <input type="text" class="form-control" name="city" [(ngModel)]="user.city">
+                <label class="ml-4 mr-1" for="country">Country:</label>
+                <input type="text" class="form-control" name="country" [(ngModel)]="user.country">
               </div>
             </form>
           </tab>
