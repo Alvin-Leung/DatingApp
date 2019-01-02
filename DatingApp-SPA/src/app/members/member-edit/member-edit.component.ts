@@ -39,7 +39,7 @@ export class MemberEditComponent implements OnInit {
       this.alertify.success('Profile updated successfully!');
       this.editForm.reset(this.user);
     }, error => {
-      this.alertify.error('error');
+      this.alertify.error(error);
     });
   }
 }
